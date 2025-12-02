@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Real Estate - Premium Land & Villa Sales in Jaipur</title>
+    <meta name="description" content="Specialist in Residential Plots, Agricultural Land, Commercial Land & Premium Villas in Jaipur. Book paid consultation for expert guidance.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.85)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e5e5e5" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 2rem 120px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: #d4af37;
+            color: #1e3a5f;
+        }
+        
+        .btn-primary:hover {
+            background: #c19b2a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+        }
+        
+        .btn-secondary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Section Styles */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Property Categories */
+        .property-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .category-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Search Bar */
+        .search-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .search-form input, .search-form select {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .search-form button {
+            background: #1e3a5f;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .search-form button:hover {
+            background: #2c5282;
+        }
+        
+        /* Property Listings */
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .property-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .property-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .property-details {
+            padding: 1.5rem;
+        }
+        
+        .property-details h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-info {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .property-price {
+            color: #d4af37;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        /* Consultation Booking */
+        .booking-container {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .booking-step {
+            display: none;
+        }
+        
+        .booking-step.active {
+            display: block;
+        }
+        
+        .calendar-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .time-slot {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .time-slot:hover, .time-slot.selected {
+            border-color: #d4af37;
+            background: #fff9e6;
+        }
+        
+        .payment-options {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option:hover {
+            border-color: #d4af37;
+            background: #fff9e6;
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .qr-placeholder {
+            width: 250px;
+            height: 250px;
+            background: #f0f0f0;
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: #f8f9fa;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+        
+        .stars {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-category {
+            color: #d4af37;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-title {
+            color: #1e3a5f;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-date {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #d4af37;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #1e3a5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background: #d4af37;
+            color: #1e3a5f;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Piyush Real Estate</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#consultation">Consultation</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/917019901055" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Find Your Ideal Land or Villa in Jaipur With Trusted Guidance</h1>
+        <p>Specialist in Residential Plots, Agricultural Land, Commercial Land & Premium Villas</p>
+        <div class="cta-buttons">
+            <a href="#properties" class="btn btn-primary">Explore Properties</a>
+            <a href="#consultation" class="btn btn-secondary">Book Paid Consultation (₹499)</a>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties">
+        <h2>Our Property Categories</h2>
+        <p class="section-subtitle">Explore premium land and villa options across Jaipur</p>
+        
+        <div class="property-categories">
+            <div class="category-card" onclick="filterProperties('agricultural')">
+                <div class="category-icon">🌾</div>
+                <h3>Agricultural Land</h3>
+                <p>Fertile farmland for agriculture</p>
+            </div>
+            <div class="category-card" onclick="filterProperties('residential')">
+                <div class="category-icon">🏡</div>
+                <h3>Residential Plot</h3>
+                <p>Build your dream home</p>
+            </div>
+            <div class="category-card" onclick="filterProperties('commercial')">
+                <div class="category-icon">🏢</div>
+                <h3>Commercial Plot</h3>
+                <p>Prime business locations</p>
+            </div>
+            <div class="category-card" onclick="filterProperties('villa')">
+                <div class="category-icon">🏰</div>
+                <h3>Premium Villas</h3>
+                <p>Luxury ready-to-move villas</p>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <form class="search-form" onsubmit="searchProperties(event)">
+                <input type="text" placeholder="Location (e.g., Mansarovar, Vaishali)" id="searchLocation">
+                <select id="searchType">
+                    <option value="">Property Type</option>
+                    <option value="agricultural">Agricultural Land</option>
+                    <option value="residential">Residential Plot</option>
+                    <option value="commercial">Commercial Plot</option>
+                    <option value="villa">Villa</option>
+                </select>
+                <input type="text" placeholder="Budget (e.g., 50 Lakhs)" id="searchBudget">
+                <button type="submit">Search Properties</button>
+            </form>
+        </div>
+
+        <!-- Property Listings -->
+        <div class="property-grid" id="propertyGrid">
+            <!-- Sample Properties -->
+            <div class="property-card" data-type="residential">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Residential Plot - Mansarovar</h3>
+                    <div class="property-info">
+                        📍 Mansarovar, Jaipur<br>
+                        📏 1200 sq ft
+                    </div>
+                    <div class="property-price">₹45 Lakhs</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Residential Plot - Mansarovar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="property-card" data-type="agricultural">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Agricultural Land - Sanganer</h3>
+                    <div class="property-info">
+                        📍 Sanganer, Jaipur<br>
+                        📏 5 Bigha
+                    </div>
+                    <div class="property-price">₹1.2 Crore</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Agricultural Land - Sanganer" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="property-card" data-type="villa">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Premium Villa - Vaishali Nagar</h3>
+                    <div class="property-info">
+                        📍 Vaishali Nagar, Jaipur<br>
+                        📏 3 BHK, 2500 sq ft
+                    </div>
+                    <div class="property-price">₹1.8 Crore</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Premium Villa - Vaishali Nagar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="property-card" data-type="commercial">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Commercial Plot - Malviya Nagar</h3>
+                    <div class="property-info">
+                        📍 Malviya Nagar, Jaipur<br>
+                        📏 2000 sq ft
+                    </div>
+                    <div class="property-price">₹95 Lakhs</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Commercial Plot - Malviya Nagar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="property-card" data-type="residential">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Residential Plot - Jagatpura</h3>
+                    <div class="property-info">
+                        📍 Jagatpura, Jaipur<br>
+                        📏 1500 sq ft
+                    </div>
+                    <div class="property-price">₹52 Lakhs</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Residential Plot - Jagatpura" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="property-card" data-type="villa">
+                <div class="property-image">📷 Property Image</div>
+                <div class="property-details">
+                    <h3>Luxury Villa - Ajmer Road</h3>
+                    <div class="property-info">
+                        📍 Ajmer Road, Jaipur<br>
+                        📏 4 BHK, 3200 sq ft
+                    </div>
+                    <div class="property-price">₹2.5 Crore</div>
+                    <a href="https://wa.me/917019901055?text=I'm interested in Luxury Villa - Ajmer Road" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Booking Section -->
+    <section id="consultation">
+        <h2>Book Your Paid Consultation</h2>
+        <p class="section-subtitle">Get expert guidance for your property investment - ₹499 only</p>
+        
+        <div class="booking-container">
+            <!-- Step 1: Date & Time Selection -->
+            <div class="booking-step active" id="step1">
+                <h3 style="color: #1e3a5f; margin-bottom: 2rem;">Step 1: Choose Date & Time</h3>
+                <div class="calendar-container">
+                    <label for="consultationDate" style="display: block; margin-bottom: 1rem; font-weight: 600;">Select Date:</label>
+                    <input type="date" id="consultationDate" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;" min="">
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: #1e3a5f;">Available Time Slots:</h4>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="selectTimeSlot(this, '10:00 AM')">10:00 AM</div>
+                        <div class="time-slot" onclick="selectTimeSlot(this, '11:00 AM')">11:00 AM</div>
+                        <div class="time-slot" onclick="selectTimeSlot(this, '12:00 PM')">12:00 PM</div>
+                        <div class="time-slot" onclick="selectTimeSlot(this, '02:00 PM')">02:00 PM</div>
+                        <div class="time-slot" onclick="selectTimeSlot(this, '03:00 PM')">03:00 PM</div>
+                        <div class="time-slot" onclick="selectTimeSlot(this, '04:00 PM')">04:00 PM</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="proceedToPayment()" style="width: 100%; margin-top: 2rem;">Proceed to Payment</button>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="booking-step" id="step2">
+                <h3 style="color: #1e3a5f; margin-bottom: 2rem;">Step 2: Complete Payment</h3>
+                <div class="payment-options">
+                    <h4 style="margin-bottom: 1.5rem; color: #1e3a5f;">Consultation Fee: ₹499</h4>
+                    <p style="margin-bottom: 2rem; color: #666;">Selected: <span id="selectedDateTime" style="font-weight: bold; color: #d4af37;"></span></p>
+                    
+                    <div class="payment-option" onclick="payWithGPay()">
+                        <div>
+                            <strong style="color: #1e3a5f;">Google Pay</strong><br>
+                            <small style="color: #666;">UPI: piyush9459.23@okicici</small>
+                        </div>
+                        <span style="font-size: 2rem;">📱</span>
+                    </div>
+                    
+                    <div class="payment-option" onclick="payWithPhonePe()">
+                        <div>
+                            <strong style="color: #1e3a5f;">PhonePe</strong><br>
+                            <small style="color: #666;">UPI: 7696712763@ybl</small>
+                        </div>
+                        <span style="font-size: 2rem;">📱</span>
+                    </div>
+                    
+                    <div class="qr-code">
+                        <h4 style="color: #1e3a5f; margin-bottom: 1rem;">Or Scan QR Code</h4>
+                        <div class="qr-placeholder">
+                            <p style="color: #999;">QR Code for UPI Payment<br>Amount: ₹499</p>
+                        </div>
+                        <p style="color: #666; margin-top: 1rem;">Scan with any UPI app to pay</p>
+                    </div>
+                    
+                    <button class="btn btn-secondary" onclick="confirmPayment()" style="width: 100%; margin-top: 2rem;">I Have Completed Payment</button>
+                </div>
+            </div>
+
+            <!-- Confirmation -->
+            <div class="booking-step" id="confirmation">
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                    <h3 style="color: #28a745; margin-bottom: 1rem;">Payment Successful!</h3>
+                    <p style="color: #666; margin-bottom: 2rem;">Your consultation slot is confirmed.</p>
+                    <div style="background: white; padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                        <p><strong>Date & Time:</strong> <span id="confirmedDateTime" style="color: #d4af37;"></span></p>
+                        <p><strong>Amount Paid:</strong> ₹499</p>
+                        <p style="margin-top: 1rem; color: #666;">A confirmation has been sent to your contact details.</p>
+                    </div>
+                    <a href="https://wa.me/917019901055" class="btn btn-primary">Contact Us on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="section-subtitle">Trusted by hundreds of satisfied property buyers</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Bought a residential plot through Piyush — extremely transparent and smooth experience. He guided us through every step and ensured we got the best deal."</p>
+                <p class="testimonial-author">- Rajesh Kumar</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Highly trusted for agricultural land purchases. Genuine advice and no hidden charges. Piyush helped us find the perfect farmland for our needs."</p>
+                <p class="testimonial-author">- Priya Sharma</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Piyush guided us perfectly for our villa investment. His market knowledge and professional approach made the entire process hassle-free. Highly recommend!"</p>
+                <p class="testimonial-author">- Amit Verma</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Latest Insights & Updates</h2>
+        <p class="section-subtitle">Stay informed about Jaipur real estate market</p>
+        
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">📰 Blog Image</div>
+                <div class="blog-content">
+                    <div class="blog-category">Market Update</div>
+                    <h3 class="blog-title">Jaipur Real Estate Market Trends 2024</h3>
+                    <p class="blog-excerpt">Discover the latest trends in Jaipur's property market and what it means for investors...</p>
+                    <p class="blog-date">December 1, 2024</p>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">📰 Blog Image</div>
+                <div class="blog-content">
+                    <div class="blog-category">Investment Guide</div>
+                    <h3 class="blog-title">Top 5 Areas for Land Investment in Jaipur</h3>
+                    <p class="blog-excerpt">Expert analysis of the most promising locations for land investment in and around Jaipur...</p>
+                    <p class="blog-date">November 28, 2024</p>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">📰 Blog Image</div>
+                <div class="blog-content">
+                    <div class="blog-category">Government Updates</div>
+                    <h3 class="blog-title">New Infrastructure Projects in Jaipur</h3>
+                    <p class="blog-excerpt">How upcoming government projects will impact property values in different areas...</p>
+                    <p class="blog-date">November 25, 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">We're here to help you find your perfect property</p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3 style="color: #1e3a5f; margin-bottom: 2rem;">Contact Information</h3>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:7019901055" style="color: #666; text-decoration: none;">7019901055</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:contact@genzrealty.in" style="color: #666; text-decoration: none;">genzrealty.in</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Office Address</strong><br>
+                        <span style="color: #666;">Narayan Vihar Rd, Narayan Vihar,<br>Jaipur, Rajasthan 302020</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div>
+                        <strong>WhatsApp</strong><br>
+                        <a href="https://wa.me/917019901055" style="color: #666; text-decoration: none;">Chat with us</a>
+                    </div>
+                </div>
+                
+                <h4 style="color: #1e3a5f; margin-top: 2rem; margin-bottom: 1rem;">Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/piyush_realestate_?igsh=c2hsbGp5ZjBjZ2o1&utm_source=qr" target="_blank" class="social-link">Instagram</a>
+                    <a href="https://www.facebook.com/share/19r3vrmdvH/?mibextid=wwXIfr" target="_blank" class="social-link">Facebook</a>
+                    <a href="https://www.youtube.com/@Piyush_realestate" target="_blank" class="social-link">YouTube</a>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.7234567890123!2d75.7234567890123!3d26.9234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU1JzI0LjQiTiA3NcKwNDMnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="https://maps.app.goo.gl/GrYKoMzsEk8GdYk98" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Piyush Real Estate, Jaipur. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: #d4af37;">Specialist in Land & Villa Sales | Trusted Property Consultant</p>
+    </footer>
+
+    <script>
+        // Set minimum date for consultation booking
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('consultationDate');
+            const today = new Date();
+            today.setDate(today.getDate() + 1);
+            dateInput.min = today.toISOString().split('T')[0];
+        });
+
+        let selectedTime = '';
+        let selectedDate = '';
+
+        function selectTimeSlot(element, time) {
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            selectedTime = time;
+        }
+
+        function proceedToPayment() {
+            selectedDate = document.getElementById('consultationDate').value;
+            
+            if (!selectedDate) {
+                alert('Please select a date');
+                return;
+            }
+            
+            if (!selectedTime) {
+                alert('Please select a time slot');
+                return;
+            }
+            
+            const dateObj = new Date(selectedDate);
+            const formattedDate = dateObj.toLocaleDateString('en-IN', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            document.getElementById('selectedDateTime').textContent = `${formattedDate} at ${selectedTime}`;
+            
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+        }
+
+        function payWithGPay() {
+            const upiUrl = `upi://pay?pa=piyush9459.23@okicici&pn=Piyush Real Estate&am=499&cu=INR&tn=Consultation Booking`;
+            window.location.href = upiUrl;
+        }
+
+        function payWithPhonePe() {
+            const upiUrl = `upi://pay?pa=7696712763@ybl&pn=Piyush Real Estate&am=499&cu=INR&tn=Consultation Booking`;
+            window.location.href = upiUrl;
+        }
+
+        function confirmPayment() {
+            const dateObj = new Date(selectedDate);
+            const formattedDate = dateObj.toLocaleDateString('en-IN', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            document.getElementById('confirmedDateTime').textContent = `${formattedDate} at ${selectedTime}`;
+            
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('confirmation').classList.add('active');
+        }
+
+        function filterProperties(type) {
+            const cards = document.querySelectorAll('.property-card');
+            cards.forEach(card => {
+                if (card.dataset.type === type) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('propertyGrid').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function searchProperties(event) {
+            event.preventDefault();
+            const location = document.getElementById('searchLocation').value.toLowerCase();
+            const type = document.getElementById('searchType').value;
+            const budget = document.getElementById('searchBudget').value;
+            
+            const cards = document.querySelectorAll('.property-card');
+            let foundAny = false;
+            
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                let matches = true;
+                
+                if (location && !cardText.includes(location)) {
+                    matches = false;
+                }
+                
+                if (type && card.dataset.type !== type) {
+                    matches = false;
+                }
+                
+                card.style.display = matches ? 'block' : 'none';
+                if (matches) foundAny = true;
+            });
+            
+            if (!foundAny) {
+                alert('No properties found matching your criteria. Please try different filters or contact us directly.');
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
