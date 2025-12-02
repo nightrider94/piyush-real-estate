@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piyush Real Estate - Premium Land & Villa Sales in Jaipur</title>
     <meta name="description" content="Specialist in Residential Plots, Agricultural Land, Commercial Land & Premium Villas in Jaipur. Book paid consultation for expert guidance.">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         * {
             margin: 0;
@@ -168,6 +169,253 @@
             color: #666;
             margin-bottom: 3rem;
             font-size: 1.1rem;
+        }
+        
+        /* Lead Capture Form */
+        .lead-form-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+        
+        .lead-form-container.compact {
+            max-width: 500px;
+            padding: 2rem;
+        }
+        
+        .lead-form-container h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .lead-form-container .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .form-group label .required {
+            color: #dc3545;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-group .hint {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 0.25rem;
+        }
+        
+        .form-group .error {
+            font-size: 0.85rem;
+            color: #dc3545;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error input,
+        .form-group.has-error select,
+        .form-group.has-error textarea {
+            border-color: #dc3545;
+        }
+        
+        .form-group.has-error .error {
+            display: block;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .checkbox-group a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        
+        .file-upload {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: #d4af37;
+            background: #fff9e6;
+        }
+        
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: #d4af37;
+            color: #1e3a5f;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-submit:hover:not(:disabled) {
+            background: #c19b2a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .loader {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loader.active {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #d4af37;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-content h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-content p {
+            color: #666;
+            margin-bottom: 2rem;
         }
         
         /* Property Categories */
@@ -561,6 +809,11 @@
             h2 {
                 font-size: 2rem;
             }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
         
         .hidden {
@@ -593,6 +846,50 @@
         <div class="cta-buttons">
             <a href="#properties" class="btn btn-primary">Explore Properties</a>
             <a href="#consultation" class="btn btn-secondary">Book Paid Consultation (₹499)</a>
+        </div>
+    </section>
+
+    <!-- Lead Form - Hero (Compact) -->
+    <section style="padding: 40px 2rem;">
+        <div class="lead-form-container compact">
+            <h3>Get Property Updates</h3>
+            <p class="subtitle">Share your requirements and we'll find the perfect match for you</p>
+            <form id="heroLeadForm" class="lead-form">
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" required>
+                    <span class="error">Please enter your full name</span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number <span class="required">*</span></label>
+                    <input type="tel" name="phone" placeholder="10-digit mobile number" required>
+                    <span class="error">Please enter a valid 10-digit mobile number</span>
+                </div>
+                <div class="form-group">
+                    <label>Interested In <span class="required">*</span></label>
+                    <select name="interest" required>
+                        <option value="">Select Property Type</option>
+                        <option value="Residential Plot">Residential Plot</option>
+                        <option value="Agricultural Land">Agricultural Land</option>
+                        <option value="Commercial Plot">Commercial Plot</option>
+                        <option value="Villa">Villa</option>
+                    </select>
+                    <span class="error">Please select your interest</span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="consent" id="heroConsent" required>
+                        <label for="heroConsent">I agree to be contacted by Piyush Real Estate and accept the <a href="#privacy">Privacy Policy</a> <span class="required">*</span></label>
+                    </div>
+                    <span class="error">You must accept the terms to continue</span>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                <button type="submit" class="btn-submit">Get Property Updates</button>
+            </form>
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Submitting your request...</p>
+            </div>
         </div>
     </section>
 
@@ -652,7 +949,7 @@
                         📏 1200 sq ft
                     </div>
                     <div class="property-price">₹45 Lakhs</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Residential Plot - Mansarovar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Residential Plot - Mansarovar')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
 
@@ -665,7 +962,7 @@
                         📏 5 Bigha
                     </div>
                     <div class="property-price">₹1.2 Crore</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Agricultural Land - Sanganer" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Agricultural Land - Sanganer')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
 
@@ -678,7 +975,7 @@
                         📏 3 BHK, 2500 sq ft
                     </div>
                     <div class="property-price">₹1.8 Crore</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Premium Villa - Vaishali Nagar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Premium Villa - Vaishali Nagar')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
 
@@ -691,7 +988,7 @@
                         📏 2000 sq ft
                     </div>
                     <div class="property-price">₹95 Lakhs</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Commercial Plot - Malviya Nagar" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Commercial Plot - Malviya Nagar')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
 
@@ -704,7 +1001,7 @@
                         📏 1500 sq ft
                     </div>
                     <div class="property-price">₹52 Lakhs</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Residential Plot - Jagatpura" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Residential Plot - Jagatpura')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
 
@@ -717,7 +1014,7 @@
                         📏 4 BHK, 3200 sq ft
                     </div>
                     <div class="property-price">₹2.5 Crore</div>
-                    <a href="https://wa.me/917019901055?text=I'm interested in Luxury Villa - Ajmer Road" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire Now</a>
+                    <button class="btn btn-primary" onclick="openPropertyEnquiry('Luxury Villa - Ajmer Road')" style="width: 100%; text-align: center;">Request More Info</button>
                 </div>
             </div>
         </div>
@@ -865,7 +1162,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Full Lead Form -->
     <section id="contact">
         <h2>Get In Touch</h2>
         <p class="section-subtitle">We're here to help you find your perfect property</p>
@@ -914,6 +1211,109 @@
                 </div>
             </div>
             
+            <!-- Full Contact Form -->
+            <div class="lead-form-container" style="margin: 0;">
+                <h3>Send Us Your Requirements</h3>
+                <p class="subtitle">Fill in the details and we'll get back to you within 24 hours</p>
+                <form id="contactLeadForm" class="lead-form">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="name" required>
+                        <span class="error">Please enter your full name</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number <span class="required">*</span></label>
+                        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        <span class="error">Please enter a valid 10-digit mobile number</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email">
+                        <span class="hint">Optional - for email updates</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Interested In <span class="required">*</span></label>
+                        <select name="interest" required>
+                            <option value="">Select Property Type</option>
+                            <option value="Residential Plot">Residential Plot</option>
+                            <option value="Agricultural Land">Agricultural Land</option>
+                            <option value="Commercial Plot">Commercial Plot</option>
+                            <option value="Villa">Villa</option>
+                        </select>
+                        <span class="error">Please select your interest</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Location / Area</label>
+                        <input type="text" name="location" placeholder="e.g., Mansarovar, Vaishali Nagar">
+                        <span class="hint">Optional - helps us find better matches</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget (₹)</label>
+                        <input type="text" name="budget" placeholder="e.g., 50 Lakhs">
+                        <span class="hint">Optional - your approximate budget</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Contact Method <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contact_method" value="WhatsApp" required> WhatsApp</label>
+                            <label><input type="radio" name="contact_method" value="Call"> Call</label>
+                            <label><input type="radio" name="contact_method" value="Email"> Email</label>
+                        </div>
+                        <span class="error">Please select a contact method</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time to Contact</label>
+                        <select name="preferred_time">
+                            <option value="">Any Time</option>
+                            <option value="Morning">Morning (9 AM - 12 PM)</option>
+                            <option value="Afternoon">Afternoon (12 PM - 5 PM)</option>
+                            <option value="Evening">Evening (5 PM - 8 PM)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message / Requirements</label>
+                        <textarea name="message" maxlength="500" placeholder="Tell us more about your requirements..."></textarea>
+                        <span class="hint">Max 500 characters</span>
+                    </div>
+                    <div class="form-group">
+                        <label>How did you find us?</label>
+                        <select name="source">
+                            <option value="">Select Source</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Referral">Referral</option>
+                            <option value="Google">Google Search</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Documents (Optional)</label>
+                        <div class="file-upload" onclick="document.getElementById('contactFileUpload').click()">
+                            <p>📎 Click to upload documents or images (Max 10 MB)</p>
+                            <input type="file" id="contactFileUpload" name="files" multiple accept="image/*,.pdf,.doc,.docx">
+                        </div>
+                        <span class="hint">Property documents, reference images, etc.</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="consent" id="contactConsent" required>
+                            <label for="contactConsent">I agree to be contacted by Piyush Real Estate and accept the <a href="#privacy">Privacy Policy</a> <span class="required">*</span></label>
+                        </div>
+                        <span class="error">You must accept the terms to continue</span>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" style="margin-bottom: 1rem;"></div>
+                    <button type="submit" class="btn-submit">Submit Enquiry</button>
+                </form>
+                <div class="loader">
+                    <div class="spinner"></div>
+                    <p>Submitting your enquiry...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div style="margin-top: 3rem;">
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.7234567890123!2d75.7234567890123!3d26.9234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU1JzI0LjQiTiA3NcKwNDMnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
                 <div style="text-align: center; margin-top: 1rem;">
@@ -929,6 +1329,66 @@
         <p style="margin-top: 0.5rem; color: #d4af37;">Specialist in Land & Villa Sales | Trusted Property Consultant</p>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSuccessModal()">&times;</button>
+            <div class="success-icon">✅</div>
+            <h3>Thank You!</h3>
+            <p id="successMessage">We've received your request. We'll contact you within 24 hours.</p>
+            <a href="#" id="whatsappLink" class="btn btn-primary" style="margin-bottom: 1rem;">💬 Chat on WhatsApp Now</a>
+            <button class="btn btn-secondary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Property Enquiry Modal -->
+    <div id="propertyEnquiryModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <button class="modal-close" onclick="closePropertyEnquiry()">&times;</button>
+            <h3 id="propertyEnquiryTitle">Request Property Information</h3>
+            <form id="propertyEnquiryForm" class="lead-form">
+                <input type="hidden" name="property" id="propertyName">
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" required>
+                    <span class="error">Please enter your full name</span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number <span class="required">*</span></label>
+                    <input type="tel" name="phone" required>
+                    <span class="error">Please enter a valid 10-digit mobile number</span>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Contact Method <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contact_method" value="WhatsApp" required> WhatsApp</label>
+                        <label><input type="radio" name="contact_method" value="Call"> Call</label>
+                        <label><input type="radio" name="contact_method" value="Email"> Email</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Any specific questions about this property?"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="consent" id="propertyConsent" required>
+                        <label for="propertyConsent">I agree to be contacted <span class="required">*</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Submit Request</button>
+            </form>
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Submitting...</p>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Set minimum date for consultation booking
         document.addEventListener('DOMContentLoaded', function() {
@@ -936,11 +1396,199 @@
             const today = new Date();
             today.setDate(today.getDate() + 1);
             dateInput.min = today.toISOString().split('T')[0];
+            
+            // Capture UTM parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const utmSource = urlParams.get('utm_source');
+            const utmMedium = urlParams.get('utm_medium');
+            const utmCampaign = urlParams.get('utm_campaign');
+            
+            if (utmSource) localStorage.setItem('utm_source', utmSource);
+            if (utmMedium) localStorage.setItem('utm_medium', utmMedium);
+            if (utmCampaign) localStorage.setItem('utm_campaign', utmCampaign);
         });
 
         let selectedTime = '';
         let selectedDate = '';
 
+        // Phone number validation and formatting
+        function validatePhone(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            
+            if (value.length === 10) {
+                input.value = '+91 ' + value.slice(0, 5) + ' ' + value.slice(5);
+                return true;
+            } else {
+                input.value = value;
+                return false;
+            }
+        }
+
+        // Email validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Form submission handler
+        function handleFormSubmit(form, event) {
+            event.preventDefault();
+            
+            // Clear previous errors
+            form.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('has-error');
+            });
+            
+            let isValid = true;
+            const formData = new FormData(form);
+            const data = {};
+            
+            // Validate required fields
+            const name = form.querySelector('[name="name"]');
+            if (!name.value.trim()) {
+                name.closest('.form-group').classList.add('has-error');
+                isValid = false;
+            } else {
+                data.name = name.value.trim();
+            }
+            
+            const phone = form.querySelector('[name="phone"]');
+            const phoneValue = phone.value.replace(/\D/g, '');
+            if (phoneValue.length !== 10) {
+                phone.closest('.form-group').classList.add('has-error');
+                isValid = false;
+            } else {
+                data.phone = '+91' + phoneValue;
+            }
+            
+            const email = form.querySelector('[name="email"]');
+            if (email && email.value && !validateEmail(email.value)) {
+                email.closest('.form-group').classList.add('has-error');
+                isValid = false;
+            } else if (email && email.value) {
+                data.email = email.value;
+            }
+            
+            const interest = form.querySelector('[name="interest"]');
+            if (interest && !interest.value) {
+                interest.closest('.form-group').classList.add('has-error');
+                isValid = false;
+            } else if (interest) {
+                data.interest = interest.value;
+            }
+            
+            const contactMethod = form.querySelector('[name="contact_method"]:checked');
+            if (!contactMethod) {
+                form.querySelector('[name="contact_method"]').closest('.form-group').classList.add('has-error');
+                isValid = false;
+            } else {
+                data.contact_method = contactMethod.value;
+            }
+            
+            const consent = form.querySelector('[name="consent"]');
+            if (!consent.checked) {
+                consent.closest('.form-group').classList.add('has-error');
+                isValid = false;
+            }
+            
+            // Add optional fields
+            ['location', 'budget', 'preferred_time', 'message', 'source', 'property'].forEach(field => {
+                const input = form.querySelector(`[name="${field}"]`);
+                if (input && input.value) {
+                    data[field] = input.value;
+                }
+            });
+            
+            // Add UTM parameters
+            data.utm_source = localStorage.getItem('utm_source') || '';
+            data.utm_medium = localStorage.getItem('utm_medium') || '';
+            data.utm_campaign = localStorage.getItem('utm_campaign') || '';
+            data.created_at = new Date().toISOString();
+            data.status = 'new';
+            
+            if (!isValid) {
+                return false;
+            }
+            
+            // Show loader
+            form.style.display = 'none';
+            form.nextElementSibling.classList.add('active');
+            
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+                console.log('Lead data:', data);
+                
+                // Track conversion
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'lead_submit', {
+                        'event_category': 'Lead',
+                        'event_label': data.interest || 'General Enquiry'
+                    });
+                }
+                
+                // Show success modal
+                const whatsappMessage = `Hi, I'm ${data.name}. I'm interested in ${data.interest || 'your properties'}. Please contact me.`;
+                const whatsappLink = `https://wa.me/917019901055?text=${encodeURIComponent(whatsappMessage)}`;
+                document.getElementById('whatsappLink').href = whatsappLink;
+                document.getElementById('successModal').classList.add('active');
+                
+                // Hide loader
+                form.nextElementSibling.classList.remove('active');
+                form.style.display = 'block';
+                form.reset();
+                
+                // Send to backend API
+                fetch('/api/leads', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).catch(err => console.error('Error submitting lead:', err));
+                
+            }, 2000);
+            
+            return false;
+        }
+
+        // Attach form handlers
+        document.getElementById('heroLeadForm').addEventListener('submit', function(e) {
+            handleFormSubmit(this, e);
+        });
+
+        document.getElementById('contactLeadForm').addEventListener('submit', function(e) {
+            handleFormSubmit(this, e);
+        });
+
+        document.getElementById('propertyEnquiryForm').addEventListener('submit', function(e) {
+            handleFormSubmit(this, e);
+        });
+
+        // Phone input formatting
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function() {
+                validatePhone(this);
+            });
+        });
+
+        // Property enquiry modal
+        function openPropertyEnquiry(propertyName) {
+            document.getElementById('propertyName').value = propertyName;
+            document.getElementById('propertyEnquiryTitle').textContent = `Request Info: ${propertyName}`;
+            document.getElementById('propertyEnquiryModal').classList.add('active');
+        }
+
+        function closePropertyEnquiry() {
+            document.getElementById('propertyEnquiryModal').classList.remove('active');
+        }
+
+        // Success modal
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+
+        // Existing functions
         function selectTimeSlot(element, time) {
             document.querySelectorAll('.time-slot').forEach(slot => {
                 slot.classList.remove('selected');
@@ -1018,7 +1666,6 @@
             event.preventDefault();
             const location = document.getElementById('searchLocation').value.toLowerCase();
             const type = document.getElementById('searchType').value;
-            const budget = document.getElementById('searchBudget').value;
             
             const cards = document.querySelectorAll('.property-card');
             let foundAny = false;
@@ -1044,6 +1691,7 @@
             }
         }
 
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
